@@ -1,3 +1,9 @@
-name: git prac 
-become: yes
+- name: git prac 
+  become: yes
+  hosts: localhost
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
 
